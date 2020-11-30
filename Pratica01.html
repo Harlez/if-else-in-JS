@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E eu lá sei</title>
+    <style>
+        body {
+            background-color: gray;
+            font: normal 18pt Arial;
+            text-align: center;
+            color: white;
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nascionalidade</h1>
+    Escreva em que país você nasceu: <input type="text" name="txtnacio" id="txtnacio">
+    <input type="button" value="Verificar" onclick="nacionalizar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function nacionalizar() {
+            var txtna = document.querySelector ('input#txtnacio')
+            var res = document.querySelector ('div#res')
+            var nacional = (txtna.value)
+            res.innerHTML = `<p>Você Nasceu em: ${nacional}<p>`
+            if (nacional == 'Brasil') {
+                res.innerHTML += ('Você é <strong>Brasileiro<strong>')
+            }else {
+                res.innerHTML += ('Você é <strong>gringo<stong>')
+            }
+        }
+    </script>
+</body>
+</html>
